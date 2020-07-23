@@ -51,4 +51,16 @@ public class Localizacion{
     public void setAltitud(double Altitud){
         this.Altitud = Altitud;
     }
+
+    // Otros metodos
+    //==========================================================================
+    public String print(){
+        String data = "";
+        data = data + "Longitud: " + String.valueOf(this.Longitud) + "\n";
+        data = data + "Latitud: " + String.valueOf(this.Latitud) + "\n";
+        data = data + "Altitud: " + String.valueOf(this.Altitud) + "\n";
+        data = data + "\n";
+        data = data + "Nombre del punto de localizacion: " + this.Nombre + "\n";
+        return data;
+    }
 }
