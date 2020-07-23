@@ -38,7 +38,7 @@ public class MedicionTemperatura{
      * MedicionTemperatura.getUnidadMedida()
      * */
     public static String getUnidadMedida(){
-        return unidadMedida;
+        return MedicionTemperatura.unidadMedida;
     }
 
     /**

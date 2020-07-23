@@ -38,7 +38,7 @@ public class ConcentracionN2O{
      * ConcentracionN2O.getUnidadMedida()
      * */
     public static String getUnidadMedida(){
-        return unidadMedida;
+        return ConcentracionN2O.unidadMedida;
     }
 
     /**

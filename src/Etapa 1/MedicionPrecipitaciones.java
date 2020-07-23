@@ -38,7 +38,7 @@ public class MedicionPrecipitaciones{
      * MedicionPrecipitaciones.getUnidadMedida()
      * */
     public static String getUnidadMedida(){
-        return unidadMedida;
+        return MedicionPrecipitaciones.unidadMedida;
     }
 
     /**
