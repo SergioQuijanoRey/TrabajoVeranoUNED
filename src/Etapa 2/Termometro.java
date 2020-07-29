@@ -66,10 +66,18 @@ public class Termometro{
     //==========================================================================
     /**
      * Se actualiza manualmente el ultimo valor medido
+     *
+     * En caso de que el valorUltimo este por encima del porcentaje permitido para el
+     * valor maximo, se lanza un aviso
+     *
      * @param valorUltimo el ultimo valor que insertamos manualmente
      * */
     public void setValorUltimo(double valorUltimo){
         this.valorUltimo = valorUltimo;
+
+        if(this.valorUltimo > this.valorMaximo * Termometro.porcentajeMaximo){
+            this.aviso(valorUltimo);
+        }
     }
 
     /**
@@ -95,6 +103,9 @@ public class Termometro{
      * Tener en cuenta que si se añaden valores a mano por encima del valor maximo
      * no se lanzaran avisos
      *
+     * No es recomendable usar este metodo. Lo recomendable es ir añadiendo los valores
+     * uno a uno con el metodo addMedicion()
+     *
      * @param valores los valores nuevos que se quieren dejar registrados
      * */
     public void setValores(ArrayList<MedicionTemperatura> valores){
@@ -116,7 +127,6 @@ public class Termometro{
         if(medicion.getValorMedido() > this.valorMaximo * Termometro.porcentajeMaximo){
             this.aviso(medicion.getValorMedido());
         }
-
     }
 
     /**
