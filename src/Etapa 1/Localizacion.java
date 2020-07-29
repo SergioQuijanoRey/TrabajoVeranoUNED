@@ -5,21 +5,21 @@
 public class Localizacion{
     // Atributos
     //==========================================================================
-    private String Nombre;
-    private double Latitud;
-    private double Longitud;
-    private double Altitud;
+    private String nombre;
+    private double latitud;
+    private double longitud;
+    private double altitud;
 
     // Constructores
     //==========================================================================
     /**
      * Constructor de la clase
      * */
-    Localizacion(String Nombre, double Latitud, double Longitud, double Altitud){
-        this.Nombre = Nombre;
-        this.Latitud = Latitud;
-        this.Longitud = Longitud;
-        this.Altitud = Altitud;
+    Localizacion(String nombre, double latitud, double longitud, double altitud){
+        this.nombre = nombre;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.altitud = altitud;
     }
 
     // Getters
@@ -28,28 +28,28 @@ public class Localizacion{
      * Getter del nombre de la localizacion
      * */
     public String getNombre(){
-        return this.Nombre;
+        return this.nombre;
     }
 
     /**
      * Getter de la latitud de la localizacion
      * */
     public double getLatitud(){
-        return this.Latitud;
+        return this.latitud;
     }
 
     /**
      * Getter de la longitud de la localizacion
      * */
     public double getLongitud(){
-        return this.Longitud;
+        return this.longitud;
     }
 
     /**
      * Getter de la altitud de la localizacion
      * */
     public double getAltitud(){
-        return this.Altitud;
+        return this.altitud;
     }
 
     // Setters
@@ -57,29 +57,29 @@ public class Localizacion{
     /**
      * Modifica el nombre de la localizacion
      * */
-    public void setNombre(String Nombre){
-        this.Nombre = Nombre;
+    public void setNombre(String nombre){
+        this.nombre = nombre;
     }
 
     /**
      * Modifica la latitud de la localizacion
      * */
-    public void setLatitud(double Latitud){
-        this.Latitud = Latitud;
+    public void setLatitud(double latitud){
+        this.latitud = latitud;
     }
 
     /**
      * Modifica la longitud de la localizacion
      * */
-    public void setLongitud(double Longitud){
-        this.Longitud = Longitud;
+    public void setLongitud(double longitud){
+        this.longitud = longitud;
     }
 
     /**
      * Modifica la altitud de la localizacion
      * */
-    public void setAltitud(double Altitud){
-        this.Altitud = Altitud;
+    public void setAltidud(double altitud){
+        this.altitud = altitud;
     }
 
     // Otros metodos
@@ -90,11 +90,11 @@ public class Localizacion{
      * */
     public String print(){
         String data = "";
-        data = data + "Longitud: " + String.valueOf(this.Longitud) + "\n";
-        data = data + "Latitud: " + String.valueOf(this.Latitud) + "\n";
-        data = data + "Altitud: " + String.valueOf(this.Altitud) + "\n";
+        data = data + "Longitud: " + String.valueOf(this.longitud) + "\n";
+        data = data + "Latitud: " + String.valueOf(this.latitud) + "\n";
+        data = data + "Altitud: " + String.valueOf(this.altitud) + "\n";
         data = data + "\n";
-        data = data + "Nombre del punto de localizacion: " + this.Nombre + "\n";
+        data = data + "Nombre del punto de localizacion: " + this.nombre + "\n";
         return data;
     }
 }
