@@ -9,7 +9,7 @@ public class Termometro{
     private int id;                                     // Identificador del instrumento
     private double valorMaximo;                         // Valor maximo de temperatura
     private ArrayList<MedicionTemperatura> valores;     // Valores medidos por el instrumento
-    private static final double porcentajeMaximo = 0.8; // Porcentaje del valor maximo que al superarse lanza un aviso
+    private static final double porcentajeMaximo = 0.9; // Porcentaje del valor maximo que al superarse lanza un aviso
     private double valorUltimo;                         // Ultimo valor registrado
 
     // Constructores
@@ -88,6 +88,7 @@ public class Termometro{
 
     /**
      * Se establecen manualmente el conjunto de valores medidos
+     *
      * Tener en cuenta que hay que actualizar a mano el atributo valorUltimo para
      * que esta operacion tenga sentido y no deje el objeto en un estado incoherente
      *
