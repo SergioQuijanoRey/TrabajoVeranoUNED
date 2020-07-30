@@ -115,18 +115,18 @@ public class Termometro{
     // Otros metodos
     //==========================================================================
     /**
-     * Se añade una medicion de temperatura al instrumento y se actualiza el ultimo valor medido
+     * Se añade una medicion de temperatura al instrumento
+     *
+     * Tener en cuenta que no se actualiza el valor del atributo valorUltimo
+     * Esto debe hacerse a mano invocando al metodo setValorUltimo()
+     * Por lo tanto, un mal uso de la clase puede dejarla en estado inconsistente
+     * Ademas, la comprobacion de los valores maximos se hace en el metodo setValorUltimo()
+     *
      * @param medicion la medicion que se añade
      * */
     public void addMedicion(MedicionTemperatura medicion){
         // Añado el valor
         this.valores.add(medicion);
-        this.valorUltimo = medicion.getValorMedido();
-
-        // Compruebo que no se haya añadido un valor extremo
-        if(medicion.getValorMedido() > this.valorMaximo * Termometro.porcentajeMaximo){
-            this.aviso(medicion.getValorMedido());
-        }
     }
 
     /**
