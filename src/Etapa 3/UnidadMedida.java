@@ -8,9 +8,9 @@
 public enum UnidadMedida {
 
     // Valores que toma el enumerado
-    Temperatura("T", "Cº"),
-    Precipitaciones("P", "l_m2"),
-    ConcentracionN2O("N2O", "mg_m3"),
+    C("T", "Cº"),
+    LITROS_M2("P", "l_m2"),
+    MG_M3("N2O", "mg_m3"),
     Undefined("Sin definir", "Sin definir");   // Unidad para cuando no se especifica unidades
 
     // Logica basica del enumerado

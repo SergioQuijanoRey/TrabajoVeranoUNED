@@ -8,7 +8,7 @@ public class DetectorN2O{
     //==========================================================================
     private int id;                                     // Identificador del instrumento
     private double valorMaximo;                         // Valor maximo de concentracion de gas
-    private ArrayList<ConcentracionN2O> valores;        // Valores medidos por el instrumento
+    private ArrayList<Medicion> valores;                // Valores medidos por el instrumento
     private static final double porcentajeMaximo = 1.0; // Porcentaje del valor maximo que al superarse lanza un aviso
     private double valorUltimo;                         // Ultimo valor registrado
 
@@ -22,7 +22,7 @@ public class DetectorN2O{
         this.valorMaximo = valorMaximo;
 
         // Instancio la lista de mediciones del instrumento
-        this.valores = new ArrayList<ConcentracionN2O>();
+        this.valores = new ArrayList<Medicion>();
     }
 
     // Getters
@@ -44,7 +44,7 @@ public class DetectorN2O{
     /**
      * Getter de los valores medidos del instrumento
      * */
-    public ArrayList<ConcentracionN2O> getValores(){
+    public ArrayList<Medicion> getValores(){
         return this.valores;
     }
 
@@ -108,7 +108,7 @@ public class DetectorN2O{
      *
      * @param valores los valores nuevos que se quieren dejar registrados
      * */
-    public void setValores(ArrayList<ConcentracionN2O> valores){
+    public void setValores(ArrayList<Medicion> valores){
         this.valores = valores;
     }
 
@@ -124,7 +124,7 @@ public class DetectorN2O{
      *
      * @param medicion la medicion que se añade
      * */
-    public void addMedicion(ConcentracionN2O medicion){
+    public void addMedicion(Medicion medicion){
         // Añado el valor
         this.valores.add(medicion);
     }

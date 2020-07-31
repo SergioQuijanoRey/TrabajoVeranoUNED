@@ -8,7 +8,7 @@ public class Pluviometro{
     //==========================================================================
     private int id;                                     // Identificador del instrumento
     private double valorMaximo;                         // Valor maximo de precipitaciones
-    private ArrayList<MedicionPrecipitaciones> valores; // Valores medidos por el instrumento
+    private ArrayList<Medicion> valores; // Valores medidos por el instrumento
     private static final double porcentajeMaximo = 0.8; // Porcentaje del valor maximo que al superarse lanza un aviso
     private double valorUltimo;                         // Ultimo valor registrado
 
@@ -22,7 +22,7 @@ public class Pluviometro{
         this.valorMaximo = valorMaximo;
 
         // Instancio la lista de mediciones del instrumento
-        this.valores = new ArrayList<MedicionPrecipitaciones>();
+        this.valores = new ArrayList<Medicion>();
     }
 
     // Getters
@@ -44,7 +44,7 @@ public class Pluviometro{
     /**
      * Getter de los valores medidos del instrumento
      * */
-    public ArrayList<MedicionPrecipitaciones> getValores(){
+    public ArrayList<Medicion> getValores(){
         return this.valores;
     }
 
@@ -108,7 +108,7 @@ public class Pluviometro{
      *
      * @param valores los valores nuevos que se quieren dejar registrados
      * */
-    public void setValores(ArrayList<MedicionPrecipitaciones> valores){
+    public void setValores(ArrayList<Medicion> valores){
         this.valores = valores;
     }
 
@@ -124,7 +124,7 @@ public class Pluviometro{
      *
      * @param medicion la medicion que se añade
      * */
-    public void addMedicion(MedicionPrecipitaciones medicion){
+    public void addMedicion(Medicion medicion){
         // Añado el valor
         this.valores.add(medicion);
     }

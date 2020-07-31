@@ -18,9 +18,9 @@ public class EstacionMeteorologica{
     private Termometro termometro;                                      // Termometro de la estacion
     private Pluviometro pluviometro;                                    // Pluviometro de la estacion
     private DetectorN2O detector;                                       // Detector de N2O de la estacion
-    private ArrayList<MedicionTemperatura> valoresTemperatura;          // Valores de temperatura
-    private ArrayList<MedicionPrecipitaciones> valoresPrecipitaciones;  // Valores de precipitaciones
-    private ArrayList<ConcentracionN2O> valoresN2O;                     // Valores de concentraciones de gas
+    private ArrayList<Medicion> valoresTemperatura;                     // Valores de temperatura
+    private ArrayList<Medicion> valoresPrecipitaciones;                 // Valores de precipitaciones
+    private ArrayList<Medicion> valoresN2O;                             // Valores de concentraciones de gas
 
     // Constructores
     //==========================================================================
@@ -38,9 +38,9 @@ public class EstacionMeteorologica{
         this.pluviometro = null;
         this.detector = null;
 
-        this.valoresTemperatura = new ArrayList<MedicionTemperatura>();
-        this.valoresPrecipitaciones = new ArrayList<MedicionPrecipitaciones>();
-        this.valoresN2O = new ArrayList<ConcentracionN2O>();
+        this.valoresTemperatura = new ArrayList<Medicion>();
+        this.valoresPrecipitaciones = new ArrayList<Medicion>();
+        this.valoresN2O = new ArrayList<Medicion>();
     }
 
     // Getters
@@ -83,21 +83,21 @@ public class EstacionMeteorologica{
     /**
      * Getter de los valores medidos de temperatura
      * */
-    public ArrayList<MedicionTemperatura> getValoresTemperatura(){
+    public ArrayList<Medicion> getValoresTemperatura(){
         return this.valoresTemperatura;
     }
 
     /**
      * Getter de los valores medidos de temperatura
      * */
-    public ArrayList<MedicionPrecipitaciones> getValoresPrecipitaciones(){
+    public ArrayList<Medicion> getValoresPrecipitaciones(){
         return this.valoresPrecipitaciones;
     }
 
     /**
      * Getter de los valores medidos de concentracion de N2O
      * */
-    public ArrayList<ConcentracionN2O> getValoresN2O(){
+    public ArrayList<Medicion> getValoresN2O(){
         return this.valoresN2O;
     }
 
@@ -141,21 +141,21 @@ public class EstacionMeteorologica{
     /**
      * Modifica los valores de temperatura de la estacion
      * */
-    public void setValoresTemperatura(ArrayList<MedicionTemperatura> valoresTemperatura){
+    public void setValoresTemperatura(ArrayList<Medicion> valoresTemperatura){
         this.valoresTemperatura = valoresTemperatura;
     }
 
     /**
      * Modifica los valores de precipitaciones de la estacion
      * */
-    public void setValoresPrecipitaciones(ArrayList<MedicionPrecipitaciones> valoresPrecipitaciones){
+    public void setValoresPrecipitaciones(ArrayList<Medicion> valoresPrecipitaciones){
         this.valoresPrecipitaciones = valoresPrecipitaciones;
     }
 
     /**
      * Modifica los valores de concentracion de N2O de la estacion
      * */
-    public void setValoresN2O(ArrayList<ConcentracionN2O> valoresN2O){
+    public void setValoresN2O(ArrayList<Medicion> valoresN2O){
         this.valoresN2O = valoresN2O;
     }
 
@@ -240,7 +240,7 @@ public class EstacionMeteorologica{
      *
      * @param temperatura medicion de temperatura que se añade
      * */
-    public void addTemp(MedicionTemperatura temperatura){
+    public void addTemp(Medicion temperatura){
         this.valoresTemperatura.add(temperatura);
     }
 
@@ -253,7 +253,7 @@ public class EstacionMeteorologica{
      *
      * @param precipitacion medicion de precipitaciones que se añade
      * */
-    public void addPrecip(MedicionPrecipitaciones precipitacion){
+    public void addPrecip(Medicion precipitacion){
         this.valoresPrecipitaciones.add(precipitacion);
 
     }
@@ -267,7 +267,7 @@ public class EstacionMeteorologica{
      *
      * @param concentracion medicion de concentraciones que se añade
      * */
-    public void addConcentrN2O(ConcentracionN2O concentracion){
+    public void addConcentrN2O(Medicion concentracion){
         this.valoresN2O.add(concentracion);
     }
 }

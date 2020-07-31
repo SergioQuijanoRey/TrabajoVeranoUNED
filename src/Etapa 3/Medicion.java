@@ -1,23 +1,27 @@
+import java.util.Date;
+
 /**
  * Clase que representa una medicion
  * */
 public class Medicion{
+
     // Atributos
     //==========================================================================
     private int identificador;
-    private static final UnidadMedida unidadMedida = UnidadMedida.Undefined;
     private Date momentoMedicion;
     private double valorMedido;
+    private UnidadMedida unidadMedida;
 
     // Constructores
     //==========================================================================
     /**
      * Constructor de la clase
      * */
-    Medicion(int identificador, double valorMedido, Date momentoMedicion){
+    Medicion(int identificador, double valorMedido, Date momentoMedicion, UnidadMedida unidadMedida){
         this.identificador = identificador;
         this.valorMedido = valorMedido;
         this.momentoMedicion = momentoMedicion;
+        this.unidadMedida = unidadMedida;
     }
 
     // Getters
@@ -31,12 +35,11 @@ public class Medicion{
 
     /**
      * Getter de la unidad de medida del instrumento de medida
-     * Es un getter de un atributo de clase, asi que se invoca tal que:
      *
-     * MedicionTemperatura.getUnidadMedida()
+     * Tener en cuenta que unidadMedida es un atributo de clase
      * */
-    public static UnidadMedida getUnidadMedida(){
-        return MedicionTemperatura.unidadMedida;
+    public UnidadMedida getUnidadMedida(){
+        return this.unidadMedida;
     }
 
     /**
@@ -76,6 +79,13 @@ public class Medicion{
         this.valorMedido = valorMedido;
     }
 
+    /**
+     * Modifica la unidad de medida del instrumento
+     * */
+    public void setUnidadMedida(UnidadMedida unidadMedida){
+        this.unidadMedida = unidadMedida;
+    }
+
     // Otros metodos
     //==========================================================================
     /**
@@ -84,8 +94,8 @@ public class Medicion{
      * */
     public String print(){
         String data = "";
-        data = data + "Valor medido de " + unidadMedida.getName() + ": " + String.valueOf(this.valorMedido) + "\n";
-        data = data + "Unidad de medida: " + unidadMedida.getUnit() + "\n";
+        data = data + "Valor medido de " + this.unidadMedida.getName() + ": " + String.valueOf(this.valorMedido) + "\n";
+        data = data + "Unidad de medida: " + this.unidadMedida.getUnit() + "\n";
         data = data + "\n";
         data = data + "Instante de la medicion: " + this.momentoMedicion.toString() + "\n";
         return data;
