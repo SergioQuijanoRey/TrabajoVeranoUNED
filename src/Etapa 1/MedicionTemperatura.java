@@ -9,16 +9,16 @@ public class MedicionTemperatura{
     private int identificador;
     private static final String unidadMedida = "ºC";
     private Date momentoMedicion;
-    private double valorMedio;
+    private double valorMedido;
 
     // Constructores
     //==========================================================================
     /**
      * Constructor de la clase
      * */
-    MedicionTemperatura(int identificador, double valorMedio, Date momentoMedicion){
+    MedicionTemperatura(int identificador, double valorMedido, Date momentoMedicion){
         this.identificador = identificador;
-        this.valorMedio = valorMedio;
+        this.valorMedido = valorMedido;
         this.momentoMedicion = momentoMedicion;
     }
 
@@ -51,8 +51,8 @@ public class MedicionTemperatura{
     /**
      * Getter del valor medio
      * */
-    public double getValorMedio(){
-        return this.valorMedio;
+    public double getValorMedido(){
+        return this.valorMedido;
     }
 
     // Setters
@@ -74,8 +74,8 @@ public class MedicionTemperatura{
     /**
      * Modifica el valor medio
      * */
-    public void setValorMedio(double valorMedio){
-        this.valorMedio = valorMedio;
+    public void setValorMedio(double valorMedido){
+        this.valorMedido = valorMedido;
     }
 
     // Otros metodos
@@ -86,7 +86,7 @@ public class MedicionTemperatura{
      * */
     public String print(){
         String data = "";
-        data = data + "Valor medido de T: " + String.valueOf(this.valorMedio) + "\n";
+        data = data + "Valor medido de T: " + String.valueOf(this.valorMedido) + "\n";
         data = data + "Unidad de medida: " + MedicionTemperatura.getUnidadMedida() + "\n";
         data = data + "\n";
         data = data + "Instante de la medicion: " + this.momentoMedicion.toString() + "\n";

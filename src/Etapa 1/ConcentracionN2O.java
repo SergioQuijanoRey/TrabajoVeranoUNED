@@ -9,16 +9,16 @@ public class ConcentracionN2O{
     private int identificador;
     private static final String unidadMedida = "mg_m3";
     private Date momentoMedicion;
-    private double valorMedio;
+    private double valorMedido;
 
     // Constructores
     //==========================================================================
     /**
      * Constructor de la clase
      * */
-    ConcentracionN2O(int identificador, double valorMedio, Date momentoMedicion){
+    ConcentracionN2O(int identificador, double valorMedido, Date momentoMedicion){
         this.identificador = identificador;
-        this.valorMedio = valorMedio;
+        this.valorMedido = valorMedido;
         this.momentoMedicion = momentoMedicion;
     }
 
@@ -51,8 +51,8 @@ public class ConcentracionN2O{
     /**
      * Getter del valor medio
      * */
-    public double getValorMedio(){
-        return this.valorMedio;
+    public double getValorMedido(){
+        return this.valorMedido;
     }
 
     // Setters
@@ -74,8 +74,8 @@ public class ConcentracionN2O{
     /**
      * Modifica el valor medio
      * */
-    public void setValorMedio(double valorMedio){
-        this.valorMedio = valorMedio;
+    public void setValorMedido(double valorMedido){
+        this.valorMedido = valorMedido;
     }
 
     // Otros metodos
@@ -86,7 +86,7 @@ public class ConcentracionN2O{
      * */
     public String print(){
         String data = "";
-        data = data + "Valor medido de N20: " + String.valueOf(this.valorMedio) + "\n";
+        data = data + "Valor medido de N20: " + String.valueOf(this.valorMedido) + "\n";
         data = data + "Unidad de medida: " + ConcentracionN2O.getUnidadMedida() + "\n";
         data = data + "\n";
         data = data + "Instante de la medicion: " + this.momentoMedicion.toString() + "\n";
