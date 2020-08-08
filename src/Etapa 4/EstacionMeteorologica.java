@@ -52,7 +52,7 @@ public class EstacionMeteorologica{
     /**
      * Getter de los sensores de la estacion
      * */
-    public ArrayList<Sensores> getSensores(){
+    public ArrayList<Sensor> getSensores(){
         return this.sensores;
     }
 
@@ -100,30 +100,76 @@ public class EstacionMeteorologica{
     //==========================================================================
 
     /**
+     * Devuelve todas las mediciones de una unidad de medida concreta
+     * @param unidadMedida unidad de medida que consultamos
+     * @return una lista de todas las mediciones de la unidad de medida
+     * */
+    public ArrayList<Medicion> getValoresUnidad(UnidadMedida unidadMedida){
+        ArrayList<Medicion> filtrado = new ArrayList<Medicion>();
+        for(Medicion medicion : this.valores){
+            if(medicion.getUnidadMedida() == unidadMedida){
+                filtrado.add(medicion);
+            }
+        }
+
+        return filtrado;
+    }
+
+    /**
      * Halla el valor mas alto registrado de una unidad dada, y devuelve su valor
      * medido
      * Si no hay valores medidos, se devuelve por defecto un cero
      *
      * @param unidadMedida la unidad de medida que se quiere comprobar
      * @return el valor mas alto medido de dicha medida
-     *
-     * TODO -- Falta por implementar
      * */
     public double valorMasAlto(UnidadMedida unidadMedida){
-        // Comprobacion de seguridad
-        if(this.valoresN2O == null || this.valoresN2O.size() == 0){
+        // Creamos una lista auxiliar filtrada por la unidad de medida
+        ArrayList<Medicion> filtrado = this.getValoresUnidad(unidadMedida);
+
+        // Comprobacion de seguridad sobre la lista filtrada
+        if(filtrado.size() == 0 || filtrado == null){
+            System.err.println("ERROR! No se han encontrado medidas registradas del tipo" + unidadMedida.getUnit());
+            System.err.println("Se devuelve el valor 0.0 por defecto");
             return 0.0;
         }
 
         // Iteramos buscando el maximo
-        double max = this.valoresN2O.get(0).getValorMedido();
-        for(int i = 0; i < this.valoresN2O.size(); i++){
-            if(this.valoresN2O.get(i).getValorMedido() > max){
-                max = valoresN2O.get(i).getValorMedido();
+        double max = filtrado.get(0).getValorMedido();
+        for(Medicion valor : filtrado){
+            if(valor.getValorMedido() > max){
+                max = valor.getValorMedido();
             }
         }
 
         return max;
+    }
+
+    /**
+     * Calcula el valor medio de las mediciones de una unidad de medida concreta
+     * @param unidadMedida la unidad de medida con la que se trabaja
+     * @return el valor medio
+     * */
+    public double valorMedio(UnidadMedida unidadMedida){
+        // Creamos una lista auxiliar filtrada por la unidad de medida
+        ArrayList<Medicion> filtrado = this.getValoresUnidad(unidadMedida);
+
+        // Comprobacion de seguridad sobre la lista filtrada
+        if(filtrado.size() == 0 || filtrado == null){
+            System.err.println("ERROR! No se han encontrado medidas registradas del tipo" + unidadMedida.getUnit());
+            System.err.println("Se devuelve el valor 0.0 por defecto");
+            return 0.0;
+        }
+
+        // Calculamos la suma de los valores
+        double sum = 0.0;
+        for(Medicion medicion : filtrado){
+            sum = sum + medicion.getValorMedido();
+        }
+
+        // Calculamos la media
+        double media = sum / Double.valueOf(filtrado.size());
+        return sum;
     }
 
     /**
