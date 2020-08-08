@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class GestorMedioambiental{
     // Atributos
     //==========================================================================
-    private ArrayList<EstacionMeteorologica> estaciones;
+    private ArrayList<EstacionMeteorologica> estaciones;    // Lista de estaciones gestionadas
 
     // Constructor
     //==========================================================================
@@ -20,6 +20,14 @@ public class GestorMedioambiental{
 
     // Getters
     //==========================================================================
+    /**
+     * Getter de las estaciones del gestor
+     * */
+    public ArrayList<EstacionMeteorologica> getEstaciones(){
+        return this.estaciones;
+    }
+
+
     /***
      * Devuelve todos los valores medidos de una determinada unidad de medida
      * de todas las estaciones meteorologicas
@@ -40,8 +48,16 @@ public class GestorMedioambiental{
 
     // Setters
     //==========================================================================
+    /**
+     * Modifica manualmente la lista de estaciones gestionadas
+     * */
+    public void setEstaciones(ArrayList<EstacionMeteorologica> estaciones){
+        this.estaciones = estaciones;
+    }
+
     // Otros metodos
     //==========================================================================
+
     /**
      * Añade una estacion metereologica a la lista de estaciones del GestorMediambiental
      * */
@@ -105,6 +121,5 @@ public class GestorMedioambiental{
         }
 
         return max;
-
     }
 }
