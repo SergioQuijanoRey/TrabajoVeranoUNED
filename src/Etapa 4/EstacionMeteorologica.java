@@ -15,12 +15,8 @@ public class EstacionMeteorologica{
     //==========================================================================
     private int id;                                                     // Identificador de la estacion
     private Localizacion localizacion;                                  // Localizacion de la estacion
-    private Termometro termometro;                                      // Termometro de la estacion
-    private Pluviometro pluviometro;                                    // Pluviometro de la estacion
-    private DetectorN2O detector;                                       // Detector de N2O de la estacion
-    private ArrayList<Medicion> valoresTemperatura;                     // Valores de temperatura
-    private ArrayList<Medicion> valoresPrecipitaciones;                 // Valores de precipitaciones
-    private ArrayList<Medicion> valoresN2O;                             // Valores de concentraciones de gas
+    private ArrayList<Sensor> sensores;                                 // Sensores disponibles
+    private ArrayList<Medicion> valores;                                // Valores de las mediciones realizadas
 
     // Constructores
     //==========================================================================
@@ -32,15 +28,9 @@ public class EstacionMeteorologica{
         this.id = id;
         this.localizacion = localizacion;
 
-        // Instanciamos el resto de atributos
-        // Instrumentos de medicion como null, y conjuntos de valores instanciados vacios
-        this.termometro = null;
-        this.pluviometro = null;
-        this.detector = null;
-
-        this.valoresTemperatura = new ArrayList<Medicion>();
-        this.valoresPrecipitaciones = new ArrayList<Medicion>();
-        this.valoresN2O = new ArrayList<Medicion>();
+        // Inicializamos el resto de atributos
+        this.sensores = new ArrayList<Sensor>();
+        this.valores = new ArrayList<Medicion>();
     }
 
     // Getters
@@ -232,42 +222,24 @@ public class EstacionMeteorologica{
     }
 
     /**
-     * Añade una medicion de temperaturas a la estacion
+     * Añade una medicion a la estacion
      *
-     * Tener en cuenta que hay que añadir la medicion al termometro de la estacion
+     * Tener en cuenta que hay que añadir la medicion al sensor de la estacion
      * con sus metodos pertinentes y despues añadir la medicion a la estacion con
      * este metodo
      *
-     * @param temperatura medicion de temperatura que se añade
+     * @param medicion la medicion que se añade a la estacion
      * */
-    public void addTemp(Medicion temperatura){
-        this.valoresTemperatura.add(temperatura);
+    public void addMedicion(Medicion medicion){
+        this.valores.add(medicion);
     }
 
     /**
-     * Añade una medicion de precipitaciones a la estacion
+     * Se añade un sensor a la estacion metereologica
      *
-     * Tener en cuenta que hay que añadir la medicion al pluviometro de la estacion
-     * con sus metodos pertinentes y despues añadir la medicion a la estacion con
-     * este metodo
-     *
-     * @param precipitacion medicion de precipitaciones que se añade
+     * @param sensor el sensor que se añade a la estacion
      * */
-    public void addPrecip(Medicion precipitacion){
-        this.valoresPrecipitaciones.add(precipitacion);
-
-    }
-
-    /**
-     * Añade una medicion de concentraciones a la estacion
-     *
-     * Tener en cuenta que hay que añadir la medicion al MedidorN2O de la estacion
-     * con sus metodos pertinentes y despues añadir la medicion a la estacion con
-     * este metodo
-     *
-     * @param concentracion medicion de concentraciones que se añade
-     * */
-    public void addConcentrN2O(Medicion concentracion){
-        this.valoresN2O.add(concentracion);
+    public void addSensor(Sensor sensor){
+        this.sensores.add(sensor);
     }
 }
