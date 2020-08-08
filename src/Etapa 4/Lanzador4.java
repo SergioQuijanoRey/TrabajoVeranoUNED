@@ -139,7 +139,6 @@ public class Lanzador4 {
                 + ": " + estacionBarcelona.valorMedio(UnidadMedida.C));
 
         // Creamos un objeto de la clase GestorMediambiental
-
         GestorMedioambiental gestor = new GestorMedioambiental();
 
         // Añadimos las dos estaciones meteorológicas (Madrid y Barcelona) al gestor
