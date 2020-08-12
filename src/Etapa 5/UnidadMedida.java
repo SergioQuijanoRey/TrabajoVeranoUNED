@@ -11,6 +11,7 @@ public enum UnidadMedida {
     C("T", "Cº"),
     LITROS_M2("P", "l_m2"),
     MG_M3("N2O", "mg_m3"),
+    MG_CO2_M3("CO2", "mg_co2_m3"),
     Undefined("Sin definir", "Sin definir");   // Unidad para cuando no se especifica unidades
 
     // Logica basica del enumerado
