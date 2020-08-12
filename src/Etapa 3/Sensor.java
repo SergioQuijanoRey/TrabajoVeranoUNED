@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Clase que representa un instrumento de medicion de alguna variable meteorologica
  * */
-public class Sensor{
+public abstract class Sensor{
     // Atributos
     //==========================================================================
     private int id;                                     // Identificador del instrumento
