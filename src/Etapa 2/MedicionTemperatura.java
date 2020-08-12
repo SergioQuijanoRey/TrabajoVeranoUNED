@@ -1,7 +1,7 @@
 import java.util.Date;
 
 /**
- * Clase que representa un instrumento de medida de concentracion de N2O
+ * Clase que representa un instrumento de medida de temperatura
  * */
 public class MedicionTemperatura{
     // Atributos

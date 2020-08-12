@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Clase que representa un pluviometro, instrumento de medicion de precipitaciones
+ * Clase que representa un detector de N2O, instrumento de medicion de precipitaciones
  * */
 public class DetectorN2O{
     // Atributos

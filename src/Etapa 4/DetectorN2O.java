@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Clase que representa un pluviometro, instrumento de medicion de precipitaciones
+ * Clase que representa un pluviometro, instrumento de medicion de concentraciones
  * */
 public class DetectorN2O extends Sensor{
     // El unico atributo que modifico es el porcentajeMaximo
