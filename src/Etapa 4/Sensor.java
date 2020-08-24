@@ -17,7 +17,7 @@ public abstract class Sensor{
     /**
      * Constructor de la clase
      * */
-    Sensor(int id, double valorMaximo){
+    public Sensor(int id, double valorMaximo){
         this.id = id;
         this.valorMaximo = valorMaximo;
 

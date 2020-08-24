@@ -17,7 +17,7 @@ public class DetectorN2O{
     /**
      * Constructor de la clase
      * */
-    DetectorN2O(int id, double valorMaximo){
+    public DetectorN2O(int id, double valorMaximo){
         this.id = id;
         this.valorMaximo = valorMaximo;
 

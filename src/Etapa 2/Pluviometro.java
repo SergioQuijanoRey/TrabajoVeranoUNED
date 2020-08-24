@@ -17,7 +17,7 @@ public class Pluviometro{
     /**
      * Constructor de la clase
      * */
-    Pluviometro(int id, double valorMaximo){
+    public Pluviometro(int id, double valorMaximo){
         this.id = id;
         this.valorMaximo = valorMaximo;
 

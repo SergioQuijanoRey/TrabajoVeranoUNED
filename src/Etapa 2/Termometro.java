@@ -17,7 +17,7 @@ public class Termometro{
     /**
      * Constructor de la clase
      * */
-    Termometro(int id, double valorMaximo){
+    public Termometro(int id, double valorMaximo){
         this.id = id;
         this.valorMaximo = valorMaximo;
 

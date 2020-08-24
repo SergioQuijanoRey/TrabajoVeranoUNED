@@ -15,7 +15,7 @@ public class Localizacion{
     /**
      * Constructor de la clase
      * */
-    Localizacion(String nombre, double latitud, double longitud, double altitud){
+    public Localizacion(String nombre, double latitud, double longitud, double altitud){
         this.nombre = nombre;
         this.latitud = latitud;
         this.longitud = longitud;

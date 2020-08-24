@@ -16,7 +16,7 @@ public class ConcentracionN2O{
     /**
      * Constructor de la clase
      * */
-    ConcentracionN2O(int identificador, double valorMedido, Date momentoMedicion){
+    public ConcentracionN2O(int identificador, double valorMedido, Date momentoMedicion){
         this.identificador = identificador;
         this.valorMedido = valorMedido;
         this.momentoMedicion = momentoMedicion;

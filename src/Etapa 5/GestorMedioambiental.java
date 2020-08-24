@@ -14,7 +14,7 @@ public class GestorMedioambiental{
     /**
      * Constructor de la clase
      * */
-    GestorMedioambiental(){
+    public GestorMedioambiental(){
         this.estaciones = new ArrayList<EstacionMeteorologica>();
     }
 

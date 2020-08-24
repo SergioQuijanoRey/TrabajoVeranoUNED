@@ -16,7 +16,7 @@ public class MedicionPrecipitaciones{
     /**
      * Constructor de la clase
      * */
-    MedicionPrecipitaciones(int identificador, double valorMedido, Date momentoMedicion){
+    public MedicionPrecipitaciones(int identificador, double valorMedido, Date momentoMedicion){
         this.identificador = identificador;
         this.valorMedido = valorMedido;
         this.momentoMedicion = momentoMedicion;

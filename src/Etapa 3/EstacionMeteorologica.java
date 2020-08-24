@@ -27,7 +27,7 @@ public class EstacionMeteorologica{
     /**
      * Constructor de la clase
      * */
-    EstacionMeteorologica(int id, Localizacion localizacion){
+    public EstacionMeteorologica(int id, Localizacion localizacion){
         // Datos que se aportan en el constructor
         this.id = id;
         this.localizacion = localizacion;

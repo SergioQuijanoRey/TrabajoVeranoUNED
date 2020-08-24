@@ -17,7 +17,7 @@ public class Medicion{
     /**
      * Constructor de la clase
      * */
-    Medicion(int identificador, double valorMedido, Date momentoMedicion, UnidadMedida unidadMedida){
+    public Medicion(int identificador, double valorMedido, Date momentoMedicion, UnidadMedida unidadMedida){
         this.identificador = identificador;
         this.valorMedido = valorMedido;
         this.momentoMedicion = momentoMedicion;

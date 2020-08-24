@@ -17,7 +17,7 @@ public enum UnidadMedida {
     private final String unit;
     private final String name;
 
-    UnidadMedida(String name, String unit) {
+    public UnidadMedida(String name, String unit) {
         this.name = name;
         this.unit = unit;
     }
